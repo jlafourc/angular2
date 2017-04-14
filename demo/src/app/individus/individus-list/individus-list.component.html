@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let ind of individus" class="individu">
-    {{ ind.nom }}
+    {{ ind.nom }} {{ ind.prenom }} <a href="javascript:void(0)"  (click)="gotoDetail(ind.id)" >Détail</a>
   </li>
 </ul>

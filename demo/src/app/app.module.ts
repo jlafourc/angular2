@@ -7,20 +7,26 @@ import { RouterModule, Route } from '@angular/router'
 import { AppComponent } from './app.component';
 import { IndividusComponent } from './individus/individus.component';
 import { IndividusListComponent } from './individus/individus-list/individus-list.component';
+import { ROUTES } from './app.routes';
+import {IndividusService} from './individus/individus.service';
+import { IndividuDetailComponent } from './individus/individu-detail/individu-detail.component';
+import { Error404Component } from './error404/error404.component';
+import {IndividuDetailGuard} from "./individus/individu-detail.guard";
+import { IndividuAjoutComponent } from './individus/individu-ajout/individu-ajout.component';
+import { MenuComponent } from './menu/menu.component';
 
 
-const ROUTES: Route[] = [
-  {
-    path: 'individus',
-    component: IndividusComponent
-  }
-]
+
 
 @NgModule({
   declarations: [
     AppComponent,
     IndividusComponent,
-    IndividusListComponent
+    IndividusListComponent,
+    IndividuDetailComponent,
+    Error404Component,
+    IndividuAjoutComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ const ROUTES: Route[] = [
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [IndividusService, IndividuDetailGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

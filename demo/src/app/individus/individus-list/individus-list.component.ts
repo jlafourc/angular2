@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'individus-list',
@@ -9,9 +10,13 @@ export class IndividusListComponent implements OnInit {
 
   @Input() individus: any[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  gotoDetail(id: string) {
+    this.router.navigate(['/individu-detail', id]);
   }
 
 }

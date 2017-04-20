@@ -1,5 +1,7 @@
 ## TypeScript
 
+---
+
 <img src="slides/images/typescript.png" width="450">
 
 ---

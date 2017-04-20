@@ -15,6 +15,7 @@ export class IndividusComponent implements OnInit {
 
   ngOnInit() {
     this.individus = this.individusService.findAllIndividus();
+    console.log(this.individus);
   }
 
 }

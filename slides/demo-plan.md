@@ -74,3 +74,11 @@
 * Ajout de la route par defaut
 
 * Ecriture du form de base > ngForm > ngSubmit > name > ngModel > ngModelGroup > input.ng-invalid.ng-dirty > required > minlnegth
+
+* Ecriture methode ajout dans le service (map/reduce pour l'id)
+
+* Cablage
+
+* Ajout de la directive bolder Directive
+
+* Cablage avec le back, Observable

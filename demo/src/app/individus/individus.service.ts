@@ -23,7 +23,8 @@ export class IndividusService {
   }
 
   ajouter(nom: string, prenom: string) {
-    
+    let id = this.individus.map(ind => ind.id).reduce((id1, id2) => {return (id1 >= id2 ? id1 : id2); });
+    this.individus.push({id, nom, prenom});
   }
 
 }
